@@ -1,9 +1,9 @@
-package com.chuanqihou.cqhbatis.test;
+package com.chuaniqhou.stu;
 
+import com.chuaniqhou.stu.pojo.User;
 import com.chuanqihou.cqhbatis.core.SqlSession;
 import com.chuanqihou.cqhbatis.core.SqlSessionFactory;
 import com.chuanqihou.cqhbatis.core.SqlSessionFactoryBuilder;
-import com.chuanqihou.cqhbatis.test.pojo.User;
 import com.chuanqihou.cqhbatis.util.Resource;
 import org.junit.Test;
 
@@ -27,7 +27,7 @@ public class CqhBatisTest {
         SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.builder(Resource.getResourceAsStream("cqhbatis-config.xml"));
         SqlSession session = sqlSessionFactory.openSession();
 
-        User user = new User("1003", "李四", "23");
+        User user = new User("1004", "李四", "23");
 
         int insert = session.insert("user.insertUser", user);
 
@@ -43,7 +43,7 @@ public class CqhBatisTest {
         SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.builder(Resource.getResourceAsStream("cqhbatis-config.xml"));
         SqlSession session = sqlSessionFactory.openSession();
 
-        Object o = session.selectOne("user.selectUserById", "1001");
+        Object o = session.selectOne("user.selectUserById", "1004");
         System.out.println(o);
     }
 

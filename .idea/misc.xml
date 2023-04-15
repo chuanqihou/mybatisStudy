@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/003-mybatis-configuration/pom.xml" />
         <option value="$PROJECT_DIR$/004-parse-xml-dom4j/pom.xml" />
         <option value="$PROJECT_DIR$/cqhbatis/pom.xml" />
+        <option value="$PROJECT_DIR$/cqhbatis-test/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,4 +1,4 @@
-package com.chuanqihou.cqhbatis.test.pojo;
+package com.chuaniqhou.stu.pojo;
 
 /**
  * @author 传奇后

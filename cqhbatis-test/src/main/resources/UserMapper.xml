@@ -1,0 +1,12 @@
+
+<mapper namespace="user">
+
+    <insert id="insertUser">
+        insert into t_cqhbatis values(#{id},#{name},#{age})
+    </insert>
+
+    <select id="selectUserById" resultType="com.chuaniqhou.stu.pojo.User">
+        select * from t_cqhbatis where id=#{userId}
+    </select>
+
+</mapper>

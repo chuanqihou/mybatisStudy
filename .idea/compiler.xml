@@ -12,6 +12,7 @@
         <module name="003-mybatis-configuration" />
         <module name="cqhbatis" />
         <module name="001-introduction" />
+        <module name="cqhbatis-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,6 +21,7 @@
       <module name="003-mybatis-configuration" target="17" />
       <module name="004-parse-xml-dom4j" target="17" />
       <module name="cqhbatis" target="17" />
+      <module name="cqhbatis-test" target="17" />
       <module name="testMaven" target="1.7" />
       <module name="untitled" target="1.7" />
       <module name="untitled1" target="17" />
