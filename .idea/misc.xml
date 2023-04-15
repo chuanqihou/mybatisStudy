@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/005-mybatis-web" />
     <file type="web" url="file://$PROJECT_DIR$/testMaven" />
   </component>
   <component name="MavenProjectsManager">
@@ -12,6 +13,7 @@
         <option value="$PROJECT_DIR$/004-parse-xml-dom4j/pom.xml" />
         <option value="$PROJECT_DIR$/cqhbatis/pom.xml" />
         <option value="$PROJECT_DIR$/cqhbatis-test/pom.xml" />
+        <option value="$PROJECT_DIR$/005-mybatis-web/pom.xml" />
       </list>
     </option>
   </component>
