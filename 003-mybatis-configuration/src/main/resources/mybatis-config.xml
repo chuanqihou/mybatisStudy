@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!--根标签，表示配置信息-->
+<configuration>
+
+
+<!--    <properties>
+        <property name="jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="jdbc.url" value="jdbc:mysql://localhost:3306/cs2301"/>
+        <property name="jdbc.username" value="root"/>
+        <property name="jdbc.password" value="123215"/>
+    </properties>-->
+
+    <properties resource="jdbc.properties"/>
+
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+    <!--以“s”结尾表示复数，也就是说mybatis的环境可以配置多个数据源。-->
+    <!--
+      default属性：表示默认使用的是哪个环境，default后面填写的是environment的id。default的值
+      只需要和environment的id值一致即可。
+    -->
+    <environments default="development">
+        <!--具体的环境配置（主要包括：事务管理器的配置 + 数据源的配置）-->
+        <!--
+          id：给当前环境一个唯一标识，该标识用在environments的default后面，用来指定默认环境的选择。
+        -->
+        <environment id="development">
+            <!--配置事务管理器-->
+            <!--
+              type属性：指定事务管理器具体使用什么方式，可选值包括两个
+                  ■ JDBC：使用JDBC原生的事务管理机制。
+                  ■ MANAGED：交给其它容器来管理事务，比如WebLogic、JBOSS等。
+            -->
+            <transactionManager type="JDBC"/>
+
+            <!--指定数据源-->
+            <!--
+              type属性：用来指定具体使用的数据库连接池的策略，可选值包括三个
+                  UNPOOLED：采用传统的获取连接的方式，虽然也实现Javax.sql.DataSource接口，但是并没有使用池的思想。
+                  POOLED：采用传统的javax.sql.DataSource规范中的连接池，mybatis中有针对规范的实现。
+                  JNDI：采用服务器提供的JNDI技术实现，来获取DataSource对象，不同的服务器所能拿到DataSource是不一样。
+                        如果不是web或者maven的war工程，JNDI是不能使用的。
+            -->
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+        <!--其他环境-->
+        <environment id="userEn">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/test"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123215"/>
+            </dataSource>
+        </environment>
+
+    </environments>
+
+    <!--mappers：在mappers标签中可以配置多个sql映射文件的路径。-->
+    <mappers>
+        <!--mapper：配置某个sql映射文件的路径-->
+        <!--
+              resource属性：使用相对于类路径的资源引用方式
+              url属性：使用完全限定资源定位符（URL）方式
+        -->
+        <mapper resource="UserMapper.xml"/>
+    </mappers>
+</configuration>

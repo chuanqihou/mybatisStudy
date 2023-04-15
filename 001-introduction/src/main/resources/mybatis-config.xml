@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <settings>
+        <!--开启标准日志（mybatis已经实现）
+            常见的日志组件：
+                LOG4F
+                LOG4F2
+                SLF4J   沙拉风，日志标准。框架logback  实现了沙拉风规范
+                STDOUT_LOGGING
+            注意：LOG4J、LOG4J2、logback都是同一个作者
+        -->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+
+        <!--可不配，mybatis会自动查找-->
+        <!--<setting name="logImpl" value="SLF4J"/>-->
+    </settings>
+
+    <environments default="development">
+        <environment id="development">
+            <!--mybatis事物管理设置 transactionManager
+                type有两个值：
+                    JDBC jdbc
+                    MANAGED managed
+                    不区分大小写
+                jdbc:表示事物交由原生的jdbc管理（自动提交默认关闭）
+                managed：mybatis将不在管理事物，管理事物权限交由第三方管理，比如Spring等
+            -->
+            <transactionManager type="JDBC"/>
+            <!--数据库源-->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/cs2301"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123215"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="UserMapper.xml"/>
+
+        <!--绝对路径-->
+        <!--<mapper url="file:///d:/UserMapper.xml"/>-->
+
+    </mappers>
+</configuration>

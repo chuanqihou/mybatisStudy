@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="user">
+
+    <insert id="insertUserOld">
+        insert into user values(null,'赵六','zhaoliu',23)
+    </insert>
+
+    <insert id="insertUserMap">
+        insert into user values(#{id},#{name},#{password},#{age})
+    </insert>
+
+    <insert id="insertUser">
+        insert into user values(#{userId},#{userName},#{userPassword},#{userAge})
+    </insert>
+
+    <delete id="deleteUserById">
+        delete from user where user_id=#{userId}
+    </delete>
+
+    <update id="updateUserById">
+        update user set user_name=#{userName},user_password=#{userPassword},user_age=#{userAge} where user_id=#{userId}
+    </update>
+
+    <insert id="test">
+        insert into test values(#{id},#{flag})
+    </insert>
+
+    <select id="selectUserById" resultType="com.chuaniqhou.crud.bean.User">
+        select * from user where user_id=#{userId}
+    </select>
+
+    <select id="selectUserById2" resultType="com.chuaniqhou.crud.bean.User">
+        select user_id userId,
+               user_name userName,
+               user_password userPassword,
+               user_age userAge
+        from user where user_id=#{userId}
+    </select>
+
+    <select id="selectAllUser" resultType="com.chuaniqhou.crud.bean.User">
+        select user_id userId,
+               user_name userName,
+               user_password userPassword,
+               user_age userAge
+        from user
+    </select>
+
+
+</mapper>

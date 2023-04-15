@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/001-introduction/001-introduction.iml" filepath="$PROJECT_DIR$/001-introduction/001-introduction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/002-mybatis-crud/002-mybatis-crud.iml" filepath="$PROJECT_DIR$/002-mybatis-crud/002-mybatis-crud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/003-mybatis-configuration/003-mybatis-configuration.iml" filepath="$PROJECT_DIR$/003-mybatis-configuration/003-mybatis-configuration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/004-parse-xml-dom4j/004-parse-xml-dom4j.iml" filepath="$PROJECT_DIR$/004-parse-xml-dom4j/004-parse-xml-dom4j.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cqhbatis/cqhbatis.iml" filepath="$PROJECT_DIR$/cqhbatis/cqhbatis.iml" />
+    </modules>
+  </component>
+</project>

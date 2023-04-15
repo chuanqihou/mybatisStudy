@@ -1,0 +1,6 @@
+# Project exclude paths
+/001-introduction/target/
+/002-mybatis-crud/target/
+/003-mybatis-configuration/target/
+/004-parse-xml-dom4j/target/
+/cqhbatis/target/

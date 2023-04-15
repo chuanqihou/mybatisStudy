@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="002-mybatis-crud" />
+        <module name="004-parse-xml-dom4j" />
+        <module name="003-mybatis-configuration" />
+        <module name="cqhbatis" />
+        <module name="001-introduction" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="001-introduction" target="17" />
+      <module name="002-mybatis-crud" target="17" />
+      <module name="003-mybatis-configuration" target="17" />
+      <module name="004-parse-xml-dom4j" target="17" />
+      <module name="cqhbatis" target="17" />
+      <module name="testMaven" target="1.7" />
+      <module name="untitled" target="1.7" />
+      <module name="untitled1" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
